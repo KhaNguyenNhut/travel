@@ -1,0 +1,7 @@
+.product-card {
+  position: relative;
+  cursor: pointer;
+}
+.product-card:hover {
+  border: 2px solid rgb(0, 212, 81);
+}

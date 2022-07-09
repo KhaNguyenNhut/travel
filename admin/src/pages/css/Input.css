@@ -1,0 +1,173 @@
+.input-container label {
+  color: #19110b;
+  display: block;
+  margin: 0 0 0.5rem;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.4285714285714286;
+  letter-spacing: 0.4px;
+  text-align: left;
+}
+
+.input-container input {
+  width: 100%;
+  background: #fff;
+  background-clip: padding-box;
+  border: 1px solid #eae8e4;
+  border-radius: 5px;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #19110b;
+  height: 2rem;
+  text-align: left;
+  font-weight: 400;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 2;
+  letter-spacing: 0.4px;
+  transition: border 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+  padding: 0 1rem;
+  line-height: 3rem;
+}
+.input-container input:hover {
+  border: 1px solid #000;
+}
+.input-container.input-container input:focus {
+  outline: none;
+}
+.input-container.disabled input:hover {
+  cursor: not-allowed;
+}
+.input-container input.errors {
+  border: 1px solid #c53929;
+}
+.message-error {
+  display: block;
+  color: #c53929;
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: 0.4px;
+  line-height: 32px;
+}
+
+.container-select select {
+  color: #19110b;
+  display: block;
+  margin: 0 0 0.5rem;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.4285714285714286;
+  letter-spacing: 0.4px;
+  text-align: left;
+}
+
+.container-select select {
+  width: 100%;
+  background: #fff;
+  background-clip: padding-box;
+  border: 1px solid #eae8e4;
+  border-radius: 5px;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #19110b;
+  height: 2rem;
+  text-align: left;
+  font-weight: 400;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 2;
+  letter-spacing: 0.4px;
+  transition: border 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+  padding: 0 1rem;
+  line-height: 3rem;
+}
+.container-select select:hover {
+  border: 1px solid #000;
+}
+.container-select select.errors {
+  border: 1px solid #c53929;
+}
+.select-field {
+  margin-bottom: 1rem;
+}
+
+.select-field label {
+  color: #19110b;
+  display: block;
+  margin: 0 0 0.5rem;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.4285714285714286;
+  letter-spacing: 0.4px;
+}
+
+.select-field select {
+  width: 100%;
+  background: #fff;
+  background-clip: padding-box;
+  border: 1px solid #eae8e4;
+  border-radius: 5px;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #19110b;
+  height: 2rem;
+  text-align: left;
+  font-weight: 400;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 2;
+  letter-spacing: 0.4px;
+  transition: border 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+  padding: 0 1rem;
+  line-height: 3rem;
+}
+.select-field select :hover {
+  border: 1px solid #000;
+}
+.select-field.select-field select :focus {
+  outline: none;
+}
+.select-field.disabled select :hover {
+  cursor: not-allowed;
+}
+.select-field select .errors {
+  border: 1px solid #c53929;
+}
+.select-field span {
+  display: block;
+  color: #c53929;
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: 0.4px;
+  line-height: 32px;
+}
+.btn-group button {
+  margin-left: 15px;
+}
+#label-image {
+  border-radius: 15px;
+  padding: 10px;
+  background-color: rgb(0, 180, 147);
+  color: #fff;
+  cursor: pointer;
+}
+#label-image:hover {
+  background-color: rgb(18, 224, 186);
+}
+.AddProduct input {
+  width: 45%;
+  height: 40px;
+  border-radius: 15px;
+  padding-left: 15px;
+  outline: none;
+  border: 1px solid rgb(1, 156, 96);
+  margin: 10px;
+}
+.Preview-img img {
+  width: 300px;
+  max-height: 300px;
+  border-radius: 15px;
+}

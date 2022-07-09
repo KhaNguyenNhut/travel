@@ -1,0 +1,58 @@
+.title-page {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.info-container {
+  width: 100%;
+  display: flex;
+}
+.image-product {
+  width: 30%;
+}
+.image-product img {
+  width: 300px;
+  height: 300px;
+}
+.info-product h5 {
+  font-size: 22px;
+}
+.info-product p {
+  font-size: 20px;
+}
+.info-product {
+  width: 58%;
+  margin-left: 10%;
+  display: flex;
+  align-items: flex-start;
+}
+.info-label {
+  margin-right: 30px;
+  font-size: 18px;
+}
+.info-btn button {
+  margin-right: 50px;
+  cursor: pointer;
+}
+button.cancel {
+  margin-left: 20px;
+  background-color: rgb(238, 94, 94) !important;
+}
+button.cancel:hover {
+  margin-left: 20px;
+  background-color: rgb(218, 50, 50) !important;
+}
+.info-btn input {
+  width: 100%;
+}
+.rating {
+  margin-top: 5px;
+}
+.info-evatelute img {
+  width: 50px;
+  height: 50px;
+}
+.activeEvalue {
+  width: 70px !important;
+  height: 70px !important;
+}
