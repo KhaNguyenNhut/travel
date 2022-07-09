@@ -4,46 +4,47 @@ import {
   faHouse,
   faMessage,
   faUser,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { React, useState } from "react";
-import { Link } from "react-router-dom";
-import "./Footer.scss";
+  faCloud,
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { React, useState } from 'react';
+import { Link } from 'react-router-dom';
+import './Footer.scss';
 
 export default function Footer() {
-  const noti = localStorage.getItem("notification");
-  const [activedHome, setActivedHome] = useState("rgb(15, 119, 255)");
+  const noti = localStorage.getItem('notification');
+  const [activedHome, setActivedHome] = useState('rgb(15, 119, 255)');
   const [activedMess, setActivedMess] = useState(false);
   const [activedNoti, setActivedNoti] = useState(false);
   const [activedUser, setActivedUser] = useState(false);
 
   function handleChangeActive(select) {
-    if (select === "home") {
-      setActivedHome("rgb(15, 119, 255)");
-      setActivedMess("#222");
-      setActivedNoti("#222");
-      setActivedUser("#222");
-    } else if (select === "mess") {
-      setActivedMess("rgb(15, 119, 255)");
-      setActivedHome("#222");
-      setActivedNoti("#222");
-      setActivedUser("#222");
-    } else if (select === "noti") {
-      setActivedNoti("rgb(15, 119, 255)");
-      setActivedMess("#222");
-      setActivedHome("#222");
-      setActivedUser("#222");
+    if (select === 'home') {
+      setActivedHome('rgb(15, 119, 255)');
+      setActivedMess('#222');
+      setActivedNoti('#222');
+      setActivedUser('#222');
+    } else if (select === 'mess') {
+      setActivedMess('rgb(15, 119, 255)');
+      setActivedHome('#222');
+      setActivedNoti('#222');
+      setActivedUser('#222');
+    } else if (select === 'noti') {
+      setActivedNoti('rgb(15, 119, 255)');
+      setActivedMess('#222');
+      setActivedHome('#222');
+      setActivedUser('#222');
     } else {
-      setActivedUser("rgb(15, 119, 255)");
-      setActivedMess("#222");
-      setActivedHome("#222");
-      setActivedNoti("#222");
+      setActivedUser('rgb(15, 119, 255)');
+      setActivedMess('#222');
+      setActivedHome('#222');
+      setActivedNoti('#222');
     }
   }
 
   function Logout() {
     localStorage.clear();
-    window.location.assign("/login");
+    window.location.assign('/login');
   }
   return (
     <div className="Footer">
@@ -55,7 +56,7 @@ export default function Footer() {
               className="Header-seach-icon footer-icons"
               size="xl"
               icon={faHouse}
-              onClick={() => handleChangeActive("home")}
+              onClick={() => handleChangeActive('home')}
             />
           </Link>
         </div>
@@ -65,8 +66,8 @@ export default function Footer() {
               style={{ color: activedMess }}
               className="Header-seach-icon footer-icons"
               size="xl"
-              icon={faMessage}
-              onClick={() => handleChangeActive("mess")}
+              icon={faCloud}
+              onClick={() => handleChangeActive('mess')}
             />
           </Link>
         </div>
@@ -77,7 +78,7 @@ export default function Footer() {
               className="Header-seach-icon footer-icons"
               size="xl"
               icon={faBell}
-              onClick={() => handleChangeActive("noti")}
+              onClick={() => handleChangeActive('noti')}
             />
             {noti ? <span className="noti-dot">●</span> : null}
           </Link>
@@ -89,7 +90,7 @@ export default function Footer() {
               className="Header-seach-icon footer-icons"
               size="xl"
               icon={faUser}
-              onClick={() => handleChangeActive("user")}
+              onClick={() => handleChangeActive('user')}
             />
           </Link>
         </div>
