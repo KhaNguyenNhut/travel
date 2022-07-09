@@ -21,6 +21,7 @@ export default function Blog() {
       axios
         .get('http://localhost:3001/api/post')
         .then((response) => {
+          response.data = response.data?.filter((each) => each.isDeleted !== true);
           setPost(response.data);
         })
         .catch((error) => {

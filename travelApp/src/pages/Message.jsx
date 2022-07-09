@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import Weather from './Weather/Weather';
 
 function Message() {
   return (
-    <div>Message</div>
-  )
+    <div>
+      <Weather />
+    </div>
+  );
 }
 
-export default Message
+export default Message;
