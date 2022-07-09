@@ -100,8 +100,8 @@ export default function BlogPostCard({ post, index }) {
   }
 
   function onClickRemoveReport() {
-    const path = 'http://localhost:8080/comestic/public/api/hiddenPost/';
-    axios.get(path + post.Post_id).then((response) => {
+    const path = 'http://localhost:3001/api/post/';
+    axios.delete(path + post._id).then((response) => {
       setOpen(false);
       window.location.reload();
     });
