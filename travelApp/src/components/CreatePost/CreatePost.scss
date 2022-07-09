@@ -1,0 +1,169 @@
+.CreatePost {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  padding-top: 5%;
+  border-radius: 15px;
+  margin-left: 0%;
+}
+.CreatePost-top {
+  display: flex;
+  align-items: center;
+}
+.CreatePost-sub {
+  width: 20%;
+  margin: 10px;
+}
+.CreatePost-sub img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.CreatePost-main {
+  width: 70%;
+  height: 70px;
+}
+.CreatePost-main textarea {
+  width: 100%;
+  height: 70px;
+  outline: none;
+  resize: none;
+  background-color: rgb(231, 231, 231);
+  color: #222;
+  border-radius: 15px;
+  padding-left: 15px;
+  padding-top: 12px;
+  &::placeholder {
+    color: #222;
+  }
+}
+.CreatePost-bot {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px;
+}
+.CreatePost-bot img {
+  width: 40px;
+  height: 40px;
+  border-radius: 30%;
+  object-fit: cover;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+.CreatePost-bot input[type="file"] {
+  display: none;
+}
+.CreatePost-bot-items {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 124px;
+}
+.CreatePost-bot-items p {
+  margin-left: 10px;
+}
+.CreatePost-bot-items button {
+  width: 100px;
+  height: 45px;
+  border-radius: 15px;
+  color: #fff;
+  background-color: rgb(2, 164, 240);
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .label-name {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .CreatePost-sub {
+    width: 15%;
+    margin: 0px;
+  }
+  .CreatePost-main {
+    margin-left: 20px;
+    width: 78%;
+    height: 70px;
+  }
+  .CreatePost-sub img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 15px;
+  }
+}
+#districts,
+#city {
+  border: solid 1px rgb(5, 115, 218);
+  padding: 10px;
+  border-radius: 15px;
+  width: 100%;
+}
+.btn {
+  width: 150px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #1e90ff;
+  color: #fff;
+  padding: 10px;
+  margin-top: 50px;
+}
+.modal-box button {
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.imagePost {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.imagePost img {
+  width: 96%;
+  margin: 10px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.imagePost video {
+  width: 96%;
+  margin: 10px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.AlertContainer {
+  position: fixed;
+  width: 350px;
+  right: 0%;
+  top: 12%;
+  border-radius: 10px;
+  animation-name: example;
+  animation-duration: 3s;
+}
+
+@keyframes example {
+  20% {
+    right: 0%;
+  }
+  50% {
+    right: 33%;
+  }
+  70% {
+    right: 35%;
+  }
+  100% {
+    right: 0%;
+  }
+}

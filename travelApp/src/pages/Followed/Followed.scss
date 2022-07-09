@@ -1,0 +1,69 @@
+.Followed {
+  width: 100%;
+  height: 100%;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 15px;
+}
+.Followed-container {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  padding-top: 15px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1280px) {
+  .Followed-container {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    padding-top: 20%;
+    cursor: pointer;
+  }
+}
+.Followed-container h5 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+.Followed-avatar img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 10px;
+}
+.Followed-map {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.Followed-info {
+  width: 65%;
+  margin-left: 10px;
+}
+.Followed-info p {
+  font-size: 18px;
+  font-weight: 400;
+}
+.Followed-btn button {
+  width: 100px;
+  background-color: #03afda;
+  color: #ffffff;
+  padding: 8px;
+  border-radius: 15px;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+.Followed-top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Followed-top a {
+  margin-right: 10px;
+  font-size: 18px;
+  color: #0272b3;
+}

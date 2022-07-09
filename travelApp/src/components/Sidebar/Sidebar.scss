@@ -1,0 +1,20 @@
+.Sidebar{
+    width: 30%;
+    height: 50px;
+    background-color: rgb(243, 145, 145);
+}
+.Sidebar-logo{
+    display: flex;
+    align-items: center;
+}
+.Sidebar-logo img{
+    width: 50px;
+    border-radius: 50%;
+}
+.Sidebar-logo input{
+    width: 200px;
+    height: 40px;
+    padding-left: 10px;
+    margin-left: 10px;
+    border-radius: 10px;
+}
