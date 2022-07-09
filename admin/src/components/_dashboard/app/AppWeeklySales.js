@@ -5,7 +5,6 @@ import { React, useState, useEffect } from 'react';
 // material
 import { alpha, styled } from '@mui/material/styles';
 import { Card, Typography } from '@mui/material';
-import postApi from '../../../api/postApi';
 
 // ----------------------------------------------------------------------
 
@@ -39,12 +38,14 @@ export default function AppWeeklySales() {
   const [countNews, setCountNews] = useState(0);
   useEffect(() => {
     const getData = async () => {
-      try {
-        const post = await postApi.getAllPost();
-        setCountNews(Object.keys(post).length);
-      } catch (error) {
-        console.log(error);
-      }
+      axios
+        .get('http://localhost:3001/api/post')
+        .then((response) => {
+          setCountNews(Object.keys(response.data).length);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     };
     getData();
   }, []);

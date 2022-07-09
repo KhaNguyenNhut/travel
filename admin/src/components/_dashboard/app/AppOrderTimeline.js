@@ -17,27 +17,27 @@ import { fDateTime } from '../../../utils/formatTime';
 
 const TIMELINES = [
   {
-    title: 'Nước hoa hồng Mamonde',
+    title: 'Vịnh Hạ Long',
     time: '20 đánh giá',
     type: 'order1'
   },
   {
-    title: 'Toner La Roche Posay',
+    title: 'Bà Rịa Vũng Tàu',
     time: '17 đánh giá',
     type: 'order2'
   },
   {
-    title: 'Nước xịt khoáng nha đam Milaganics',
+    title: 'Đà Lạt',
     time: '12 đánh giá',
     type: 'order3'
   },
   {
-    title: 'Lotion Ngăn Mùi Tay Chân Perspirex / Perspirex Lotion',
+    title: 'Sapa',
     time: '7 đánh giá',
     type: 'order4'
   },
   {
-    title: 'BHA Obagi Clenziderm',
+    title: 'Phú Quốc',
     time: '4 đánh giá',
     type: 'order5'
   }
@@ -86,7 +86,7 @@ export default function AppOrderTimeline() {
         }
       }}
     >
-      <CardHeader title="Top sản phẩm hot" />
+      <CardHeader title="Top địa điểm hot" />
       <CardContent>
         <Timeline>
           {TIMELINES.map((item, index) => (

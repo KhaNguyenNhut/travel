@@ -1,0 +1,30 @@
+.comment-grp {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.comment-grp img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.comment-grp h4 {
+  margin-left: 10px;
+  font-weight: 600;
+}
+.comment-modal {
+  margin-top: 10px;
+}
+.comment-content p {
+  margin-left: 50px;
+}
+.createdAt {
+  margin-left: 10px;
+  color: rgb(104, 104, 104);
+}
+.trash-icon {
+  font-size: 16px;
+  color: rgb(121, 121, 121);
+  cursor: pointer;
+  margin-left: 10px;
+}

@@ -43,9 +43,9 @@ export default function AppNewUsers() {
   useEffect(() => {
     const getData = async () => {
       axios
-        .post('http://localhost:8080/comestic/public/api/countUsers')
+        .get('http://localhost:3001/api/users')
         .then((response) => {
-          setCountUser(response.data.data);
+          setCountUser(Object.keys(response.data).length);
         })
         .catch((error) => {
           console.log(error);

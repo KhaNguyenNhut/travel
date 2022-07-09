@@ -43,9 +43,9 @@ export default function AppItemOrders() {
   useEffect(() => {
     const getData = async () => {
       axios
-        .post('http://localhost:8080/comestic/public/api/countProducts')
+        .get('http://localhost:3001/api/district')
         .then((response) => {
-          setCountProducts(response.data.data);
+          setCountProducts(Object.keys(response.data).length);
         })
         .catch((error) => {
           console.log(error);
@@ -64,7 +64,7 @@ export default function AppItemOrders() {
       </IconWrapperStyle>
       <Typography variant="h3">{fShortenNumber(countProducts)}</Typography>
       <Typography variant="subtitle2" sx={{ opacity: 0.72 }}>
-        Sản phẩm
+        Địa điểm
       </Typography>
     </RootStyle>
   );

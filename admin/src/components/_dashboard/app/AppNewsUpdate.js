@@ -16,10 +16,9 @@ export default function AppNewsUpdate() {
   useEffect(() => {
     const getData = async () => {
       axios
-        .post('http://localhost:8080/comestic/public/api/getAllPost')
+        .get('http://localhost:3001/api/post')
         .then((response) => {
-          console.log(response.data.data);
-          setPost(response.data.data);
+          setPost(response.data);
         })
         .catch((error) => {
           console.log(error);
@@ -38,21 +37,21 @@ export default function AppNewsUpdate() {
               <Box
                 component="img"
                 alt=""
-                src={`http://localhost:3000/${news.User_avatar}`}
+                src={`http://localhost:3000/${news.user[0].avatar}`}
                 sx={{ width: 48, height: 48, borderRadius: 1.5 }}
               />
               <Box sx={{ minWidth: 240 }}>
                 <Link to="#" color="inherit" underline="hover" component={RouterLink}>
                   <Typography variant="subtitle2" noWrap>
-                    {news.User_name}
+                    {news.user[0].name}
                   </Typography>
                 </Link>
                 <Typography variant="body2" sx={{ color: 'text.secondary' }} noWrap>
-                  {news.Post_content}
+                  {news.content}
                 </Typography>
               </Box>
               <Typography variant="caption" sx={{ pr: 3, flexShrink: 0, color: 'text.secondary' }}>
-                <TimeAgo date={news.Post_date} />
+                <TimeAgo date={news.createdAt} />
               </Typography>
             </Stack>
           ))}

@@ -43,9 +43,9 @@ export default function AppBugReports() {
   useEffect(() => {
     const getData = async () => {
       axios
-        .post('http://localhost:8080/comestic/public/api/countReports')
+        .get('http://localhost:3001/api/report')
         .then((response) => {
-          setCountReport(response.data.data);
+          setCountReport(Object.keys(response.data).length);
         })
         .catch((error) => {
           console.log(error);

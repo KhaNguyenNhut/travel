@@ -1,0 +1,131 @@
+.Post {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #fff;
+  margin-top: 10px;
+}
+.Post-top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.post-avatar-info {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.post-avatar-info img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.post-avatar-info p {
+  margin-left: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.post-avatar-3dots {
+  width: 5%;
+  cursor: pointer;
+}
+
+.extendmodal {
+  width: auto;
+  height: auto;
+  position: absolute;
+  background-color: #fff;
+  top: 30%;
+  left: 62%;
+  padding: 10px;
+  border-radius: 15px;
+}
+.post-avatar-time {
+  margin-left: 10px;
+}
+.post-avatar-time b {
+  padding: 10px;
+  font-size: 18px;
+}
+.post-avatar-time p {
+  font-size: 15px;
+  color: rgb(145, 145, 145);
+}
+.extendmodal p {
+  padding: 10px;
+  font-size: 15px;
+}
+.extendmodal-content {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.post-main {
+  margin-top: 10px;
+}
+.post-main-content img {
+  margin-top: 10px;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.post-main-content video {
+  margin-top: 10px;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.carousel-control-prev {
+  display: none;
+}
+.carousel-control-next {
+  display: none;
+}
+.post-bot {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.post-bot-icon {
+  width: 5%;
+  display: flex;
+  align-items: center;
+}
+.love-icon {
+  margin-right: 10px;
+  width: 100%;
+  color: rgb(255, 74, 74);
+  cursor: pointer;
+}
+.comment-icon {
+  margin-right: 10px;
+  width: 100%;
+  color: rgb(255, 182, 47);
+  cursor: pointer;
+}
+.input-comment {
+  width: 45%;
+  height: 45px;
+  background-color: rgb(231, 231, 231);
+  border-radius: 15px;
+  padding-left: 15px;
+  &:focus {
+    background-color: #fff;
+  }
+}
+.post-bot button {
+  width: 15%;
+  height: 45px;
+  border-radius: 15px;
+  background-color: rgb(0, 146, 231);
+  color: #fff;
+  &:hover {
+    opacity: 0.7;
+  }
+}

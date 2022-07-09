@@ -19,9 +19,9 @@ export default function Blog() {
   useEffect(() => {
     const getData = async () => {
       axios
-        .post('http://localhost:8080/comestic/public/api/getAllPost')
+        .get('http://localhost:3001/api/post')
         .then((response) => {
-          setPost(response.data.data);
+          setPost(response.data);
         })
         .catch((error) => {
           console.log(error);
@@ -29,6 +29,10 @@ export default function Blog() {
     };
     getData();
   }, []);
+
+  const openPost = (post) => {
+    console.log(post);
+  };
   return (
     <Page title="Dashboard: Blog | Minimal-UI">
       <Container>
@@ -45,7 +49,7 @@ export default function Blog() {
 
         <Grid container spacing={3}>
           {post.map((post, index) => (
-            <BlogPostCard key={post.Post_id} post={post} index={index} />
+            <BlogPostCard key={post.id} post={post} index={index} />
           ))}
         </Grid>
       </Container>
