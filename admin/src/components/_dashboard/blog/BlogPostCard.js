@@ -13,6 +13,7 @@ import SvgIconStyle from '../../SvgIconStyle';
 
 // ----------------------------------------------------------------------
 const path = 'http://localhost:3000/';
+const path2 = 'http://localhost:3000/assets/images/';
 
 const CardMediaStyle = styled('div')({
   position: 'relative',
@@ -92,20 +93,10 @@ export default function BlogPostCard({ post, index }) {
   const latestPostLarge = index === 0;
   const latestPost = index === 1 || index === 2;
 
-  function handleShowPost() {
-    const data = {
-      id: post.Product_id
-    };
-    axios
-      .post('http://localhost:8080/comestic/public/api/searchNameProduct', data)
-      .then((response) => {
-        setProduct(response.data.data);
-        setPostData(post);
-        setOpen(true);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+  function handleShowPost(post) {
+    setOpen(true);
+    setPostData(post);
+    console.log(postData);
   }
 
   function onClickRemoveReport() {
@@ -118,7 +109,7 @@ export default function BlogPostCard({ post, index }) {
 
   return (
     <Grid item xs={12} sm={latestPostLarge ? 12 : 6} md={latestPostLarge ? 6 : 3}>
-      <Card sx={{ position: 'relative' }} onClick={() => handleShowPost()}>
+      <Card sx={{ position: 'relative' }} onClick={() => handleShowPost(post)}>
         <CardMediaStyle
           sx={{
             ...((latestPostLarge || latestPost) && {
@@ -142,7 +133,7 @@ export default function BlogPostCard({ post, index }) {
         >
           <SvgIconStyle
             color="paper"
-            src={`http://localhost:3000${post.User_avatar}`}
+            src={`http://localhost:3000${post.user[0].avatar}`}
             sx={{
               width: 80,
               height: 36,
@@ -153,8 +144,8 @@ export default function BlogPostCard({ post, index }) {
             }}
           />
           <AvatarStyle
-            alt={post.User_name}
-            src={`http://localhost:3000${post.User_avatar}`}
+            alt={post.user[0].name}
+            src={`http://localhost:3000${post.user[0].avatar}`}
             sx={{
               ...((latestPostLarge || latestPost) && {
                 zIndex: 9,
@@ -165,11 +156,19 @@ export default function BlogPostCard({ post, index }) {
               })
             }}
           />
-          {post.Image.split('.')[1] === 'mp4' && (
-            <CoverVideoStyle src={`http://localhost:3000${post.Image}`} controls autoPlay muted />
+          {post.images[0].split('.')[1] === 'mp4' && (
+            <CoverVideoStyle
+              src={`http://localhost:3000/assets/images/${post.images[0]}`}
+              controls
+              autoPlay
+              muted
+            />
           )}
-          {post.Image.split('.')[1] !== 'mp4' && (
-            <CoverImgStyle alt={post.Post_content} src={`http://localhost:3000${post.Image}`} />
+          {post.images[0].split('.')[1] !== 'mp4' && (
+            <CoverImgStyle
+              alt={post.Post_content}
+              src={`http://localhost:3000//assets/images/${post.images[0]}`}
+            />
           )}
         </CardMediaStyle>
 
@@ -204,7 +203,7 @@ export default function BlogPostCard({ post, index }) {
               })
             }}
           >
-            {post.Post_content}
+            {post.content}
           </TitleStyle>
         </CardContent>
       </Card>
@@ -219,20 +218,20 @@ export default function BlogPostCard({ post, index }) {
             <div className="container-post">
               <div className="post-user">
                 <div className="user-avatar">
-                  <img src={path + postData.User_avatar} alt="" />
+                  <img src={path + post.user[0].avatar} alt="" />
                 </div>
                 <p className="user-name">
-                  {postData.User_name} <span>{postData.Post_date}</span>
+                  {post.user[0].name} <span>{post.user[0].createdAt}</span>
                 </p>
               </div>
               <div className="post">
-                <p className="product">{product}</p>
-                <p>{postData?.Post_content}</p>
-                {postData.Image?.length > 0 && postData?.Image.split('.')[1] === 'mp4' && (
-                  <Video src={path + postData?.Image} controls autoPlay />
+                {/* <p className="product">{product}</p> */}
+                <p>{post.content}</p>
+                {post.images[0]?.length > 0 && post?.images[0].split('.')[1] === 'mp4' && (
+                  <Video src={path2 + +post.images[0]} controls autoPlay />
                 )}
-                {postData.Image?.length > 0 && postData?.Image.split('.')[1] !== 'mp4' && (
-                  <img src={path + postData?.Image} alt="" />
+                {post.images[0]?.length > 0 && post?.images[0].split('.')[1] !== 'mp4' && (
+                  <img src={path2 + post.images[0]} alt="" />
                 )}
               </div>
               <div className="btn-hidden">
